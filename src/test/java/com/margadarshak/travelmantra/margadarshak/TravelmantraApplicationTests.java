@@ -1,4 +1,4 @@
-package com.margadarshak.travelmantra.travelmantra;
+package com.margadarshak.travelmantra.margadarshak;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

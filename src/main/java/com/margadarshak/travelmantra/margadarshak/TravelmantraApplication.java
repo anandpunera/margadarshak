@@ -1,4 +1,4 @@
-package com.margadarshak.travelmantra.travelmantra;
+package com.margadarshak.travelmantra.margadarshak;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
