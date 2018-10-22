@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.margadarshak.travelmantra.domain.CityNode;
 
 @Repository
-public interface TravelMantraRepository extends MongoRepository<CityNode, Long> {
+public interface TravelMantraRepository extends MongoRepository<CityNode, String> {
 
 }
