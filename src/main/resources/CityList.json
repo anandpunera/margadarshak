@@ -1,0 +1,78 @@
+{
+	"cityList": [
+		"Delhi",
+		"Mumbai",
+		"Bengaluru",
+		"Chennai",
+		"Kolkata",
+		"Raipur",
+		"Pune",
+		"Jaipur",
+		"Ahmedabad",
+		"Srinagar"
+	],
+	"cityCodeTrain": [
+		{
+			"Delhi": "nzm"
+		},
+		{
+			"Mumbai": "bct"
+		},
+		{
+			"Bengaluru": "sbc"
+		},
+		{
+			"Chennai": "mas"
+		},
+		{
+			"Kolkata": "koaa"
+		},
+		{
+			"Raipur": "r"
+		},
+		{
+			"Pune": "pune"
+		},
+		{
+			"Jaipur": "jp"
+		},
+		{
+			"Ahmedabad": "adi"
+		},
+		{
+			"Srinagar": "sina"
+		}
+	],
+	"cityCodeFlight": [
+		{
+			"Delhi": "del"
+		},
+		{
+			"Mumbai": "bom"
+		},
+		{
+			"Bengaluru": "blr"
+		},
+		{
+			"Chennai": "maa"
+		},
+		{
+			"Kolkata": "ccu"
+		},
+		{
+			"Raipur": "rpr"
+		},
+		{
+			"Pune": "pnq"
+		},
+		{
+			"Jaipur": "jai"
+		},
+		{
+			"Ahmedabad": "amd"
+		},
+		{
+			"Srinagar": "sxr"
+		}
+	]
+}
