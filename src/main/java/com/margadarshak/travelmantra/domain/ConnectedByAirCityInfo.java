@@ -1,6 +1,5 @@
 package com.margadarshak.travelmantra.domain;
 
-
 public class ConnectedByAirCityInfo {
 
 	private String cityName="Chennai(TN)";

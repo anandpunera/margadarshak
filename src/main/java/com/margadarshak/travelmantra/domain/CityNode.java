@@ -6,7 +6,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection="cityInfo")
 public class CityNode {
-	
 	private String cityName="Pune(MAH)";
 	private List<ConnectedByTrainCityInfo> connectedByTrainCityInfo;
 	private List<ConnectedByAirCityInfo> connectedByAirCityInfo;

@@ -17,13 +17,7 @@ import com.margadarshak.travelmantra.entity.ConnectedCityByTrain;
 @Component
 @ComponentScan
 public class DataUpdater {
-
-	
-
 	public boolean updateData(List<CityEntity> cityEntities) {
-		
 		return true;
-
 	}
-
 }

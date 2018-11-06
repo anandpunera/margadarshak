@@ -10,7 +10,7 @@ import com.margadarshak.travelmantra.dataupdater.DataUpdaterRestInterface;
 public class JerseyConfig extends ResourceConfig{
 	public JerseyConfig() {
 		register(TravelMantraControllerImpl.class);
-		register(DataUpdaterRestInterface.class);
-		
+    register(DataUpdaterRestInterface.class);
+    register(DataUpdater.class);
 	}
 }
