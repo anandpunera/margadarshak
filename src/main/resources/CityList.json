@@ -1,28 +1,26 @@
 {
 	"cityList": [
-		"Delhi",
-		"Mumbai",
-		"Bengaluru",
-		"Chennai",
-		"Kolkata",
-		"Raipur",
-		"Pune",
-		"Jaipur",
-		"Ahmedabad",
-		"Srinagar"
+		"Mumbai(MAH)",
+		"Bengaluru(KTK)",
+		"Chennai(TN)",
+		"Coimbatore(TN)",
+		"Pune(MAH)"
 	],
 	"cityCodeTrain": [
 		{
 			"Delhi": "nzm"
 		},
 		{
-			"Mumbai": "bct"
+			"Mumbai(MAH)": "bct"
 		},
 		{
-			"Bengaluru": "sbc"
+			"Bengaluru(KTK)": "sbc"
 		},
 		{
-			"Chennai": "mas"
+			"Coimbatore(TN)": "cbe"
+		},
+		{
+			"Chennai(TN)": "mas"
 		},
 		{
 			"Kolkata": "koaa"
@@ -31,7 +29,7 @@
 			"Raipur": "r"
 		},
 		{
-			"Pune": "pune"
+			"Pune(MAH)": "pune"
 		},
 		{
 			"Jaipur": "jp"
@@ -48,13 +46,16 @@
 			"Delhi": "del"
 		},
 		{
-			"Mumbai": "bom"
+			"Mumbai(MAH)": "bom"
 		},
 		{
-			"Bengaluru": "blr"
+			"Bengaluru(KTK)": "blr"
 		},
 		{
-			"Chennai": "maa"
+			"Coimbatore(TN)": "cjb"
+		},
+		{
+			"Chennai(TN)": "maa"
 		},
 		{
 			"Kolkata": "ccu"
@@ -63,7 +64,7 @@
 			"Raipur": "rpr"
 		},
 		{
-			"Pune": "pnq"
+			"Pune(MAH)": "pnq"
 		},
 		{
 			"Jaipur": "jai"

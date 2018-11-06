@@ -1,7 +1,7 @@
 package com.margadarshak.travelmantra.domain;
 
 public class ConnectedByTrainCityInfo {
-	private String cityName;
+	private String cityName="Chennai(TN)";
 	private String dayOfTravel;
 	private String travelDuration;
 	public String getCityName() {
