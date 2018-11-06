@@ -1,26 +1,29 @@
 package com.margadarshak.travelmantra.dataupdater;
 
-import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 
-import org.apache.http.client.ClientProtocolException;
-import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.stereotype.Component;
 
-import com.margadarshak.travelmantra.gateway.FlightInfoRESTHandler;
+import com.margadarshak.travelmantra.entity.CityEntity;
+import com.margadarshak.travelmantra.entity.ConnectedCityByBus;
+import com.margadarshak.travelmantra.entity.ConnectedCityByFlight;
+import com.margadarshak.travelmantra.entity.ConnectedCityByTrain;
 
-@Controller
-@Path("/dataupdater")
+@Component
+@ComponentScan
 public class DataUpdater {
+
 	
-	@GET
-	@Produces(MediaType.TEXT_PLAIN)
-	public String getMessage() throws ClientProtocolException, IOException {
-		// TODO Auto-generated method stub
-		new FlightInfoRESTHandler().makeRequest(" ", " ", " ");
-		return "Tested the response22222";
+
+	public boolean updateData(List<CityEntity> cityEntities) {
+		
+		return true;
+
 	}
+
 }

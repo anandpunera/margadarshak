@@ -4,13 +4,13 @@ import org.glassfish.jersey.server.ResourceConfig;
 import org.springframework.stereotype.Component;
 
 import com.margadarshak.travelmantra.controller.TravelMantraControllerImpl;
-import com.margadarshak.travelmantra.dataupdater.DataUpdater;
+import com.margadarshak.travelmantra.dataupdater.DataUpdaterRestInterface;
 
 @Component
 public class JerseyConfig extends ResourceConfig{
 	public JerseyConfig() {
 		register(TravelMantraControllerImpl.class);
-		register(DataUpdater.class);
+		register(DataUpdaterRestInterface.class);
 		
 	}
 }
