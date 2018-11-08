@@ -13,8 +13,7 @@ import org.springframework.stereotype.Component;
 public class CityEntity {
 
 	@Id
-	private String cityName="Pune(MAH)";
-	
+	private String cityName;
 	private List<ConnectedCityByTrain> connectedCitiesByTrain;
 	private List<ConnectedCityByFlight> connectedCitiesByFlight;
 	private List<ConnectedCityByBus> connectedCitiesByBus;

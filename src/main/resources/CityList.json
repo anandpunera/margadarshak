@@ -6,7 +6,7 @@
 		"Coimbatore(TN)",
 		"Pune(MAH)"
 	],
-	"cityCodeTrain": [
+	"cityCodeRail": [
 		{
 			"Delhi": "nzm"
 		},
@@ -43,37 +43,37 @@
 	],
 	"cityCodeFlight": [
 		{
-			"Delhi": "del"
+			"Delhi": "DEL"
 		},
 		{
-			"Mumbai(MAH)": "bom"
+			"Mumbai(MAH)": "BOM"
 		},
 		{
-			"Bengaluru(KTK)": "blr"
+			"Bengaluru(KTK)": "BLR"
 		},
 		{
-			"Coimbatore(TN)": "cjb"
+			"Coimbatore(TN)": "CJB"
 		},
 		{
-			"Chennai(TN)": "maa"
+			"Chennai(TN)": "MAA"
 		},
 		{
-			"Kolkata": "ccu"
+			"Kolkata": "CCU"
 		},
 		{
-			"Raipur": "rpr"
+			"Raipur": "RPR"
 		},
 		{
-			"Pune(MAH)": "pnq"
+			"Pune(MAH)": "PNQ"
 		},
 		{
-			"Jaipur": "jai"
+			"Jaipur": "JAI"
 		},
 		{
-			"Ahmedabad": "amd"
+			"Ahmedabad": "AMD"
 		},
 		{
-			"Srinagar": "sxr"
+			"Srinagar": "SXR"
 		}
 	]
 }
