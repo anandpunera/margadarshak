@@ -7,6 +7,8 @@ import java.util.List;
 
 
 import com.margadarshak.travelmantra.dataupdater.restHandler.DataUpdateRestHandlerFlightImpl;
+
+import org.apache.log4j.Logger;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -17,16 +19,19 @@ import com.margadarshak.travelmantra.entity.CityEntity;
 import com.margadarshak.travelmantra.entity.ConnectedCityByBus;
 import com.margadarshak.travelmantra.entity.ConnectedCityByFlight;
 import com.margadarshak.travelmantra.entity.ConnectedCityByTrain;
+import com.margadarshak.travelmantra.gateway.FlightInfoRESTHandler;
 
 @Component
 @ComponentScan
 public class DataUpdater {
 
+	static Logger logger = Logger.getLogger(DataUpdater.class.getName());
+
 	public boolean updateData(MongoOperations mongoOperations) throws IOException, JSONException, ParseException, InterruptedException {
         DataUpdateRestHandlerFlightImpl dataUpdateRestHandlerFlight = new DataUpdateRestHandlerFlightImpl();
         dataUpdateRestHandlerFlight.makeRestCall();
 		CityEntity cityEntity = new CityEntity();
-		System.out.println("cityEnity" + cityEntity.getCityName());
+		logger.info("cityEnity" + cityEntity.getCityName());
 
 		List<ConnectedCityByBus> connectedCityByBus = new ArrayList<>();
 		connectedCityByBus.add(new ConnectedCityByBus());

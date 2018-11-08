@@ -1,9 +1,12 @@
 package com.margadarshak.travelmantra.dataupdater.restHandler;
 
 import com.google.gson.JsonObject;
+import com.margadarshak.travelmantra.dataupdater.DataUpdater;
 import com.margadarshak.travelmantra.gateway.FlightInfoRESTHandler;
 import com.margadarshak.travelmantra.gateway.IRESTHandler;
 import com.margadarshak.travelmantra.urlgenerator.*;
+
+import org.apache.log4j.Logger;
 import org.json.JSONException;
 
 import java.io.IOException;
@@ -15,6 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class DataUpdateRestHandlerFlightImpl implements DataUpdateRestHandler {
     private static final int SEVEN = 7;
     private SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
+	static Logger logger = Logger.getLogger(DataUpdateRestHandlerFlightImpl.class.getName());
     @Override
     public boolean updateDB() {
         return false;
@@ -53,16 +57,16 @@ public class DataUpdateRestHandlerFlightImpl implements DataUpdateRestHandler {
                }
                catch(Exception e)
                {
-                   System.out.println("AgainTryinggggggggggggggggg in catch");
-                   System.out.println("Sleeping for 15 sec");
+                  logger.info("OMGGGGGG in catch");
+                  logger.info("Sleeping for 20 sec");
 
                   TimeUnit.SECONDS.sleep(20);
-                  System.out.println("Slept for 15 sec");
+                  logger.info("Slept for 20 sec");
                    response = (JsonObject) restHandler.makeRequest(url);
                    if(response.size()>=1) {
                        connectedFlightsDays[getIndexFromDate(dateString)] = true;
                    }
-                   System.out.println(restHandler.makeRequest(url));
+                   logger.info(restHandler.makeRequest(url));
 
 
                }
@@ -70,10 +74,10 @@ public class DataUpdateRestHandlerFlightImpl implements DataUpdateRestHandler {
                 tempCalendar.add(Calendar.DAY_OF_MONTH, 1);  // number of days to add
                 dateString = format.format(tempCalendar.getTime());
 
-                System.out.println("Counter of hits"+count);
+                logger.info("Counter of hits"+count);
 
             }
-            System.out.println(" boolean array " + connectedFlightsDays);
+            logger.info(" boolean array " + connectedFlightsDays);
         }
         return false;
     }

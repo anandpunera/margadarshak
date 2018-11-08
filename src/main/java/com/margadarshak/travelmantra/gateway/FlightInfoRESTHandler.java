@@ -17,14 +17,17 @@ import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.log4j.Logger;
 
 
 public class FlightInfoRESTHandler implements IRESTHandler{
+	
+	static Logger logger = Logger.getLogger(FlightInfoRESTHandler.class.getName());
 
 	@Override
 	public Object makeRequest(String url) throws ClientProtocolException, IOException {
 		String localUrl = "http://developer.goibibo.com/api/search/?app_id=157ecf62&app_key=a3fecb67a5a59eb5db036728b5cd9342&format=json&source=BLR&destination=LKO&dateofdeparture=20181024&seatingclass=E&adults=1&children=0&infants=0&counter=100";;
-		System.out.println(" check equality of urls "+ url);
+		logger.info(" check equality of urls "+ url);
 		return getRESTResponse(url);
 		
 	}
@@ -34,7 +37,7 @@ public class FlightInfoRESTHandler implements IRESTHandler{
 		  Client client = Client.create(config);
 		  WebResource service = client.resource(UriBuilder.fromUri(url).build());
 		  // getting JSON data
-		  System.out.println(service.accept(MediaType.APPLICATION_JSON).get(String.class));
+		  logger.info(service.accept(MediaType.APPLICATION_JSON).get(String.class));
 		  return service;
 		 }
 }
