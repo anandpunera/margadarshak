@@ -1,13 +1,12 @@
 package com.margadarshak.travelmantra.dataupdater.restHandler;
 
-import com.google.gson.JsonObject;
-import com.margadarshak.travelmantra.dataupdater.DataUpdater;
 import com.margadarshak.travelmantra.gateway.FlightInfoRESTHandler;
 import com.margadarshak.travelmantra.gateway.IRESTHandler;
 import com.margadarshak.travelmantra.urlgenerator.*;
 
 import org.apache.log4j.Logger;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -43,15 +42,15 @@ public class DataUpdateRestHandlerFlightImpl implements DataUpdateRestHandler {
             destCode = cityPairsGenerator.getCityCodesForFlight().get(cityPair.getDestination());
             for(int i=0;i<SEVEN;i++)
             {
-                JsonObject response;
+                JSONObject response;
                 IurlGenerator iurlGenerator = new UrlGeneratorFlight();
                 count++;
                 String url = iurlGenerator.generateUrl(srcCode, destCode, dateString);
 
                 IRESTHandler restHandler = new FlightInfoRESTHandler();
                try {
-                   response =  (JsonObject) restHandler.makeRequest(url);
-                   if(response.size()>=1) {
+                   response =  (JSONObject) restHandler.makeRequest(url);
+                   if(response.length()>=1) {
                        connectedFlightsDays[getIndexFromDate(dateString)] = true;
                    }
                }
@@ -62,8 +61,8 @@ public class DataUpdateRestHandlerFlightImpl implements DataUpdateRestHandler {
 
                   TimeUnit.SECONDS.sleep(20);
                   logger.info("Slept for 20 sec");
-                   response = (JsonObject) restHandler.makeRequest(url);
-                   if(response.size()>=1) {
+                   response = (JSONObject) restHandler.makeRequest(url);
+                   if(response.length()>=1) {
                        connectedFlightsDays[getIndexFromDate(dateString)] = true;
                    }
                    logger.info(restHandler.makeRequest(url));
