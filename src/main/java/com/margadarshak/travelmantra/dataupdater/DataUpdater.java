@@ -10,7 +10,6 @@ import com.margadarshak.travelmantra.dataupdater.restHandler.DataUpdateRestHandl
 
 import org.apache.log4j.Logger;
 import org.json.JSONException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.stereotype.Component;
@@ -19,7 +18,6 @@ import com.margadarshak.travelmantra.entity.CityEntity;
 import com.margadarshak.travelmantra.entity.ConnectedCityByBus;
 import com.margadarshak.travelmantra.entity.ConnectedCityByFlight;
 import com.margadarshak.travelmantra.entity.ConnectedCityByTrain;
-import com.margadarshak.travelmantra.gateway.FlightInfoRESTHandler;
 
 @Component
 @ComponentScan
@@ -48,6 +46,4 @@ public class DataUpdater {
 		mongoOperations.save(cityEntity);
 		return true;
 	}
-
-
 }
