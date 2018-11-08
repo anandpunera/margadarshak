@@ -16,7 +16,7 @@ public class TravelMantraControllerImpl implements TravelMantraController {
 	@Override
 	public String getMessage() throws ClientProtocolException, IOException {
 		// TODO Auto-generated method stub
-		new FlightInfoRESTHandler().makeRequest(" ", " ", " ");
+		new FlightInfoRESTHandler().makeRequest(" ");
 		return "Tested the response1111";
 	}
 

@@ -6,10 +6,10 @@ import java.util.List;
 import com.margadarshak.travelmantra.utility.BusRestUrlGeneratorImpl;
 import com.margadarshak.travelmantra.utility.RestHelperConstants;
 
-public class BusInfoRESTHandler implements RESTHandler{
+public class BusInfoRESTHandler implements IRESTHandler{
 
 	@Override
-	public Object makeRequest(String url, String src, String dest) {
+	public Object makeRequest(String url) {
 		BusRestUrlGeneratorImpl busRestUrlGeneratorImpl=new BusRestUrlGeneratorImpl();
 		List<String> dynamicParams=new ArrayList<>();
 		busRestUrlGeneratorImpl.generateUrl(RestHelperConstants.BUS_API, dynamicParams);
